@@ -24,6 +24,7 @@ public class CustomerController {
 	
 	@GetMapping("/list")
 	public String listCustomers(Model model) {
+		System.out.println("List called");
 		List<Customer> theCustomer=customerService.getCustomers();
 		model.addAttribute("customer", theCustomer);
 		return "list-customers";
