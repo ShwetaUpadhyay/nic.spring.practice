@@ -1,6 +1,7 @@
 package p1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -58,7 +59,7 @@ public class AddressController {
 			{
 				message="updated";
 			}
-			model.addAttribute("message",addressService.addAddress(address).getUser().getUserName() +"address" +message+ "added successfully ");
+			model.addAttribute("message",addressService.addAddress(address).getUser().getUserName() + "address" + message + " added successfully ");
 			return "message";	
 		}
 		

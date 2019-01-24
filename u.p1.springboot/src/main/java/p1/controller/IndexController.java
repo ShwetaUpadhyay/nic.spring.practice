@@ -14,7 +14,7 @@ public class IndexController implements ErrorController {
 	}
 	@RequestMapping(PATH)
 	public String error() {
-		return "no mapping available";
+		return "no access";
 	}
 
 }

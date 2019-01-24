@@ -1,6 +1,7 @@
 package p1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +24,7 @@ public class UserController {
 		this.userService = userService;
 	}
 	
-	@GetMapping("/login")
+	@GetMapping("/")
 	public String login(Model model,String error,String logout){
 		if(error!=null) {
 			model.addAttribute("error", "Your username and password are invalid");
