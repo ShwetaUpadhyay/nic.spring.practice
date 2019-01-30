@@ -1,6 +1,7 @@
 package u.p2.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +23,7 @@ public class CustomerController {
 	
 	@GetMapping("/list")
 	public String listCustomers(Model model) {
+		System.out.println("List called");
 		List<Customer> theCustomer=customerService.getCustomers();
 		model.addAttribute("customer", theCustomer);
 		return "list-customers";
