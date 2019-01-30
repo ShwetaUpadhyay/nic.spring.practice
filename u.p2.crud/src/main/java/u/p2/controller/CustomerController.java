@@ -1,8 +1,6 @@
 package u.p2.controller;
 
 import java.util.List;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -52,7 +50,7 @@ public class CustomerController {
 	@GetMapping("/delete")
 	public String deleteCustomer(@RequestParam("customerId")int theId,Model model) {
 		customerService.deleteCustomer(theId);
-		return "redirect:/custome/list";
+		return "redirect:/customer/list";
 	}
 	
 }

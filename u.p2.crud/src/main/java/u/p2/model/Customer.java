@@ -1,6 +1,8 @@
 package u.p2.model;
 
 import javax.persistence.Column;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +15,7 @@ public class Customer {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	@Column(name="id")
 	private int id;
 	
